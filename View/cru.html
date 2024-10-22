@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Azul claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Preencher a altura da tela */
+            margin: 0;
+        }
+
+        .container {
+            background-color: white; /* Fundo branco */
+            border: 1px solid #0056b3; /* Borda azul */
+            border-radius: 8px; /* Bordas arredondadas */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            width: 300px; /* Largura fixa do quadrado */
+            text-align: center; /* Centralizar o texto */
+        }
+
+        h2 {
+            color: #0056b3; /* Azul mais escuro */
+        }
+
+        label {
+            display: block; /* Para que cada label fique em uma linha separada */
+            margin-bottom: 8px; /* Espaçamento abaixo do label */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%; /* Preencher a largura do container */
+            padding: 10px;
+            margin-bottom: 20px; /* Espaçamento abaixo dos inputs */
+            border: 1px solid #ccc; /* Borda padrão */
+            border-radius: 4px; /* Bordas arredondadas */
+            box-sizing: border-box; /* Incluir padding e border na largura total */
+        }
+
+        input[type="submit"] {
+            background-color: #0056b3; /* Azul mais escuro */
+            color: white; /* Texto branco */
+            padding: 10px;
+            border: none; /* Remover borda */
+            border-radius: 4px; /* Bordas arredondadas */
+            cursor: pointer; /* Mudar o cursor ao passar o mouse */
+            transition: background-color 0.3s; /* Transição suave */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004494; /* Azul ainda mais escuro ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Criar Novo Usuário</h2>
+        <form action="../Controller/UserController.php" method="POST">
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <input type="submit" value="Criar Usuário">
+        </form>
+    </div>
+</body>
+</html>
